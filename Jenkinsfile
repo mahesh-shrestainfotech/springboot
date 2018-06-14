@@ -15,13 +15,13 @@ pipeline{
         
         stage("Unit test"){
             steps{
-                sh "sh ./mvn test"
+                sh "sh ./mvnw test"
             }
         }
         
         stage("Package"){
         	steps{
-        		sh "sh ./mvn build"
+        		sh "sh ./mvnw build"
         	}
         }        
         
