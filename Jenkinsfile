@@ -3,25 +3,25 @@ pipeline{
     stages{
         stage("checkout"){
             steps{
-                git url:'https://github.com/mahesh-shrestainfotech/calculator.git'
+                git url:'https://github.com/mahesh-shrestainfotech/springboot.git'
             }
         }
         
         stage("Compile"){
             steps{
-                sh "mvn compile"
+                sh "./mvnw compile"
             }
         }
         
         stage("Unit test"){
             steps{
-                sh "mvn test"
+                sh "./mvn test"
             }
         }
         
         stage("Package"){
         	steps{
-        		sh "mvn build"
+        		sh "./mvn build"
         	}
         }        
         
