@@ -9,19 +9,19 @@ pipeline{
         
         stage("Compile"){
             steps{
-                sh "./mvnw compile"
+                sh "sh ./mvnw compile"
             }
         }
         
         stage("Unit test"){
             steps{
-                sh "./mvn test"
+                sh "sh ./mvn test"
             }
         }
         
         stage("Package"){
         	steps{
-        		sh "./mvn build"
+        		sh "sh ./mvn build"
         	}
         }        
         
