@@ -29,9 +29,9 @@ pipeline{
         
         stage("Docker build"){
         	steps{
-        	    sh "docker login --username egiantsdocker --password Egaints#1"        	
-        		sh "docker build -t egiantsdocker/springboot ."
-        		sh "docker push egiantsdocker/springboot"
+        	    sh "sh docker login --username egiantsdocker --password Egaints#1"        	
+        		sh "sh docker build -t egiantsdocker/springboot ."
+        		sh "sh docker push egiantsdocker/springboot"
         	}
         }
         
